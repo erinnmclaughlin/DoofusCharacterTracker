@@ -4,4 +4,6 @@ DofusCharacterTracker is a web tool that can be run locally which helps you trac
 
 It was made very much for me, and how I play Dofus, but hey: it's an open-source project with a super-permissive license! Feel free to make changes!
 
+[![Buy Me a Coffee at ko-fi.com](https://raw.githubusercontent.com/BenMakesGames/AssetsForNuGet/main/buymeacoffee.png)](https://ko-fi.com/A0A12KQ16)
+
 ![](docs/screenshot.png)
