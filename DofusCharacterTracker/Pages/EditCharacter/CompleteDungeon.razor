@@ -1,0 +1,17 @@
+﻿@page "/complete-dungeon/{DungeonId:guid}"
+
+@if(OldDungeon == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <p>Completed @OldDungeon.Name.</p>
+    <p>
+        <label><InputCheckbox @bind-Value="AddFollowUpDungeon" /> Add a follow-up dungeon</label>
+    </p>
+    <div>
+        <a href="/" class="button">Cancel</a>
+        <button type="button" @onclick="DoCompleteDungeon">Complete</button>
+    </div>
+}

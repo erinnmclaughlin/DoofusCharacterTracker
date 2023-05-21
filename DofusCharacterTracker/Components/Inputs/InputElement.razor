@@ -1,0 +1,13 @@
+﻿@using DofusCharacterTracker.Database.Tables
+
+<InputSelect Value="Value" ValueChanged="ValueChanged" ValueExpression="() => Value">
+    @foreach(var element in Enum.GetValues<Element>())
+    {
+        <option value="@element">@element</option>
+    }
+</InputSelect>
+
+@code {
+    [Parameter, EditorRequired] public required Element Value { get; set; }
+    [Parameter] public EventCallback<Element> ValueChanged { get; set; }
+}
