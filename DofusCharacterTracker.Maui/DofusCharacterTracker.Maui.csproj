@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
-		<TargetFrameworks>net7.0-windows10.0.19041.0</TargetFrameworks>
+		<TargetFramework>net7.0-windows10.0.19041.0</TargetFramework>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>DofusCharacterTracker.Maui</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -56,6 +56,10 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiPlatformSpecificFolder Remove="Platforms\Android\" />
 	</ItemGroup>
 
 </Project>

@@ -1,6 +1,4 @@
 ﻿using DofusCharacterTracker.Maui.Database;
-using DofusCharacterTracker.Maui.Database.Tables;
-using FluentValidation;
 using Microsoft.AspNetCore.Components;
 using Microsoft.EntityFrameworkCore;
 

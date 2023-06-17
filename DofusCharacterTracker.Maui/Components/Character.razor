@@ -34,7 +34,7 @@
                 @foreach(var dungeon in Value.NeededDungeons.OrderBy(d => d.Dungeon))
                 {
                     <li>
-                        <i class="fa-solid fa-skull" style="color:#555" />
+                        <i class="fa-solid fa-skull" style="color:#555"></i>
                         @dungeon.Dungeon
                         @if (!string.IsNullOrWhiteSpace(dungeon.Notes))
                         {
@@ -47,7 +47,7 @@
             }
         </ul>
         <div style="margin-left:2.25rem;">
-            <a href="/edit-character/@Value.Id/add-dungeon"><i class="fa-solid fa-plus" /> Add Dungeon</a>
+            <a href="/edit-character/@Value.Id/add-dungeon"><i class="fa-solid fa-plus"></i> Add Dungeon</a>
         </div>
     </div>
 </div>
