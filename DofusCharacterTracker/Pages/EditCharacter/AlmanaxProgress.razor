@@ -1,0 +1,29 @@
+﻿@page "/edit-character/{CharacterId:guid}/almanax-progress"
+@using DofusCharacterTracker.Database.Tables
+
+@if(Model == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <EditForm Model="Model" OnValidSubmit="DoSaveChanges">
+        <FluentValidationValidator />
+
+        <p>
+            <label>Progress</label>
+            <InputSelect @bind-Value="Model.Progress">
+                @foreach(var progress in Enum.GetValues<Database.Tables.AlmanaxProgress>())
+                {
+                    <option value="@progress">@progress.GetDescription()</option>
+                }
+            </InputSelect>
+            <ValidationMessage For="() => Model.Progress"/>
+        </p>
+
+        <div>
+            <a href="/" class="button">Cancel</a>
+            <button type="submit">Save</button>
+        </div>
+    </EditForm>
+}

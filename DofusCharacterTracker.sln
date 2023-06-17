@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusCharacterTracker.Maui", "DofusCharacterTracker.Maui\DofusCharacterTracker.Maui.csproj", "{20AF11C8-9613-494C-960A-91047D0CA2D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DofusCharacterTracker", "DofusCharacterTracker\DofusCharacterTracker.csproj", "{20AF11C8-9613-494C-960A-91047D0CA2D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
