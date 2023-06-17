@@ -1,0 +1,16 @@
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 1rem;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 1rem;
+    border-bottom: 1px solid #bbb;
+    margin: -1rem -1rem 1rem;
+}
+
+.toolbar > .buttons {
+    margin-left: auto;
+}

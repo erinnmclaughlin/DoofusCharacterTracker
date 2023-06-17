@@ -1,0 +1,30 @@
+﻿@page "/edit-character/{CharacterId:guid}/add-dungeon"
+
+@if(Character == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <p>@Character.Name (Level @Character.Level @Character.Class)</p>
+    <EditForm Model="Model" OnValidSubmit="DoAddDungeon">
+        <FluentValidationValidator />
+        
+        <p>
+            <label>Dungeon Name</label>
+            <InputText @bind-Value="Model.Name" />
+            <ValidationMessage For="() => Model.Name" />
+        </p>
+        
+        <p>
+            <label>Notes (optional)</label>
+            <InputText @bind-Value="Model.Notes" />
+            <ValidationMessage For="() => Model.Notes" />
+        </p>
+        
+        <div>
+            <a href="/" class="button">Cancel</a>
+            <button type="submit">Add</button>
+        </div>
+    </EditForm>
+}

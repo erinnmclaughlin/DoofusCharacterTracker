@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+	<title>Dofus Character Tracker</title>
+	<base href="/" />
+	<link href="css/site.css" rel="stylesheet" />
+	<link href="DofusCharacterTracker.Maui.styles.css" rel="stylesheet" />
+	<style>
+		#loading {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 1rem;
+			color: #369;
+			text-align: center;
+			font-style: italic;
+		}
+		#loading img {
+			display: block;
+			margin: 0 0 1rem;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="status-bar-safe-area"></div>
+
+	<div id="app"><div id="loading"><img src="benmakesgames.svg" width="480" height="64" /><div>loading...</div></div></div>
+
+	<div id="blazor-error-ui">
+		An unhandled error has occurred.
+		<a href="" class="reload">Reload</a>
+		<a class="dismiss">🗙</a>
+	</div>
+
+	<script src="_framework/blazor.webview.js" autostart="false"></script>
+
+</body>
+
+</html>

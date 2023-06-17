@@ -1,0 +1,9 @@
+main {
+    margin: 0 auto;
+    max-width: 800px;
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3333);
+}
