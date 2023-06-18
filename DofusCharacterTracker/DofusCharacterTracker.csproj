@@ -13,10 +13,10 @@
 		<SelfContained>true</SelfContained>
 		
 		<!-- Display name -->
-		<ApplicationTitle>DofusCharacterTracker</ApplicationTitle>
+		<ApplicationTitle>Dofus Character Tracker</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.dofuscharactertracker</ApplicationId>
+		<ApplicationId>com.benmakesgames.dofuscharactertracker</ApplicationId>
 		<ApplicationIdGuid>865F5F7D-4CFF-4198-B2E5-91486FF8C74B</ApplicationIdGuid>
 
 		<!-- Versions -->

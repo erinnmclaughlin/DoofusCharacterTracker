@@ -5,7 +5,7 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
-  <Identity Name="maui-package-name-placeholder" Publisher="CN=BenMakesGames" Version="1.0.0.0" />
+  <Identity Name="17424BenMakesGames.DofusCharacterTracker" Publisher="CN=E2588427-CAD3-4EBC-8B57-0A9185349822" Version="1.0.0.0" />
 
   <Properties>
     <DisplayName>$placeholder$</DisplayName>

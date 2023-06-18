@@ -1,0 +1,1 @@
+No data is collected by this app whatsoever! (Unless Microsoft themselves are doin' something because it's in their silly app store...) No internet access required!
