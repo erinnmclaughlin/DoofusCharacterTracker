@@ -1,0 +1,44 @@
+﻿@page "/"
+
+<PageTitle>Doofus Character Tracker</PageTitle>
+
+@if(AllCharacters == null)
+{
+    <p>Loading characters...</p>
+}
+else
+{
+    <div class="toolbar">
+        <div>
+            <label>Order By</label>
+            <InputSelect TValue="CharacterOrder" Value="OrderBy" ValueChanged="UpdateOrderBy" ValueExpression="() => OrderBy">
+                @foreach(var orderBy in Enum.GetValues<CharacterOrder>())
+                {
+                    <option value="@orderBy">@orderBy</option>
+                }
+            </InputSelect>
+        </div>
+        <div>
+            <label>Dungeon</label>
+            <input type="text" @bind="FilterDungeon" @bind:event="oninput" @bind:after="@FilterAndSort" />
+        </div>
+        <div class="buttons">
+            <a href="/add-character" class="button">+ Add Character</a>
+        </div>
+    </div>
+
+    <div>
+        @if (FilteredCharacters.Count == 0)
+        {
+            <p style="margin-top:4rem; text-align:center; font-style:italic; color:#666;">No characters found!</p>
+        }
+        else
+        {
+            for (int i = 0; i < FilteredCharacters.Count; i++)
+            {
+                var localIndex = i;
+                <Character @bind-Value="FilteredCharacters[localIndex]"/>
+            }
+        }
+    </div>
+}

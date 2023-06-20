@@ -1,0 +1,72 @@
+﻿@page "/add-character"
+@using DoofusCharacterTracker.Database.Tables
+
+<PageTitle>Doofus Character Tracker - Add Character</PageTitle>
+
+<h1>Add Character</h1>
+
+<EditForm Model="Model" OnValidSubmit="DoCreateCharacter">
+    <FluentValidationValidator />
+
+    <p>
+        <label>Name</label>
+        <InputText @bind-Value="Model.Name" />
+        <ValidationMessage For="() => Model.Name" />
+    </p>
+
+    <p>
+        <label>Class</label>
+        <InputSelect @bind-Value="Model.Class">
+            @foreach (var characterClass in Enum.GetValues<Class>())
+            {
+                <option value="@characterClass">@characterClass</option>
+            }
+        </InputSelect>
+        <ValidationMessage For="() => Model.Class" />
+    </p>
+
+    <p>
+        <label>Level</label>
+        <InputNumber @bind-Value="Model.Level" />
+        <ValidationMessage For="() => Model.Level" />
+    </p>
+
+    <p>
+        <label>Elements (optional)</label>
+        <div style="display:flex; flex-direction: row;gap: 1rem;">
+            <div>
+                <InputSelect @bind-Value="Model.Element1">
+                    <option>None</option>
+                    @foreach(var element in Enum.GetValues<DofusElement>())
+                    {
+                        <option value="@element">@element</option>
+                    }
+                </InputSelect>
+            </div>
+            <div>
+                <InputSelect @bind-Value="Model.Element2">
+                    <option>None</option>
+                    @foreach(var element in Enum.GetValues<DofusElement>())
+                    {
+                        <option value="@element">@element</option>
+                    }
+                </InputSelect>
+            </div>
+        </div>
+    </p>
+
+    <p>
+        <label>Almanax Progress</label>
+        <InputSelect @bind-Value="Model.AlmanaxProgress">
+            @foreach(var progress in Enum.GetValues<AlmanaxProgress>())
+            {
+                <option value="@progress">@progress.GetDescription()</option>
+            }
+        </InputSelect>
+    </p>
+
+    <div>
+        <a href="/" class="button">Cancel</a>
+        <button type="submit">Create</button>
+    </div>
+</EditForm>
